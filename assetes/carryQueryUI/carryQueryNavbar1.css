@@ -1,0 +1,125 @@
+.navbar-box span{
+    display: none;
+}
+.navbar{
+    display: block;
+    width: 100%;
+    background-color: #ccc; 
+}
+.navbar li{
+    list-style: none;
+    float: left;
+}
+.navbar::after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+}
+.navbar li>a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+    padding: 10px 20px;
+}
+.navbar li>a:hover{
+    color: #777;
+    background-color: #fff;
+}
+.navbar .active{
+    color: #777;
+    background-color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-box{
+        color: #555;
+        background-color: #ccc;
+        padding: 15px 15px;
+    }
+    .navbar-box span{
+        display: inline-block;
+    }
+    /* 设置右边按钮 */
+    .navbar-box>.navbar-dropdown{
+        width: 30px;
+        height: 25px;
+        border: 1px solid #777;
+        float: right;
+        border-radius: 4px;
+        position: relative;
+    }
+    /* 设置按钮中的横杠伪元素 */
+    .navbar-box>.navbar-dropdown::before{
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: #777;
+        position: absolute;
+        top:6px;
+        left: 4px;
+        z-index: 2;
+    }
+    .navbar-box>.navbar-dropdown::after{
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: #777;
+        position: absolute;
+        top:15px;
+        left: 4px;
+        z-index: 2;
+    }
+    /* 点击使下拉菜单显示 */
+    .navbar-box>.navbar-dropdown:active>.navbar{
+        display: block;
+        transform: height 1s linear;
+    } 
+    .navbar{
+        /* display: none; */
+        width: 320px;
+        background-color: #ccc;
+        position: relative;
+        position: absolute;
+        top: 35px;
+        left: -276px;
+        padding: 0px;
+    }
+    .navbar ul{
+        margin:0px 0px 0px -40px;
+        width: 520px;
+        background-color:red;
+    }
+    .navbar li{
+        list-style: none; 
+        width: 100%;
+    }
+    .navbar li>a{
+        display: inline-block;
+        text-decoration: none;
+        color: #555;
+        padding: 10px;
+        font-size: 14px;
+        padding:15px 10px;
+    }
+    .navbar li:hover{
+        text-decoration: none;
+        color: #777;
+        background-color: #fff;
+    }
+    .navbar .active{
+        color: #777;
+        background-color: #fff;
+    }
+    .navbar::after{
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+        clear: both;
+        zoom: 1;
+    }
+}

@@ -1,0 +1,130 @@
+/* 表单组件样式 */
+
+/* 清空 input 默认样式 */
+input{
+    /* 输入框没有样式 */
+    border: none;
+    /* 清空获取焦点时的默认样式 */
+    outline: 0;
+     /* 清空默认样式：输入框样式 按钮样式 选择框样式 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+}
+
+/* 默认的form-group */
+.form-group{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-group .form-control{
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+/* focus 获取焦点 .form-control显示以下样式 */
+/* 可以将其他元素变为表单元素： focus 值针对有可以获取焦点的元素 */
+.form-group .form-control:focus{
+    outline: 1px solid green;
+}
+.form-label{
+    display: inline-block;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    padding: 5px 3px 5px 5px;
+}
+.form-control{
+    width: 100%;
+}
+
+/* 
+    基础样式： 权重最低的；随时可附带；代替 
+   
+    可选择样式： 在基础样式基础上进行该改变添加；通过权重级别低来覆盖样式
+   
+    自当以： 给用户足够空间，让用户通过，搭建不同结构，自己进行样式添加
+
+    结构：1：占多少份；2：如何布局
+*/
+
+@media screen and (min-width:768px){
+    /* 横向 */
+    .form-inline .form-group{
+        display: inline-block;
+        /* auto 自动 宽度由子元素撑起来 */
+        width: auto;
+    }
+    .form-inline .form-control{
+        display: inline-block;
+        width: auto;
+        padding: 6px 12px;
+    }
+
+    /* 纵向 */
+    .form-horizontal{
+        text-align: center;
+    }
+    .form-horizontal .form-group::after{
+        content: "";
+        display: table;
+    }
+    .form-horizontal .form-label{
+        float: left;
+        /* display: inline-block; */
+        max-width: 100%;
+        min-width: 16.66666667%;
+        width: auto;
+        text-align: right;
+    }
+    .form-horizontal .form-control{
+        float: left;
+        /* display: inline-block; */
+        min-width: 83.33333333%;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .form-horizontal .form-check{
+        /* float: left; */
+        display: inline-block;
+        min-width: 83.33333333%;
+        max-width:100%;
+        width: auto;
+        vertical-align: top;
+        text-align: left;
+    }
+    /* 清除浮动 */
+    .form-group::after{
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+    }
+
+    .form-horizontal .form-group{
+        width: 100%;
+    }
+}
+
+/* .form-check>.form-check-item{
+    float: left; */
+    /* display: inline-block; */
+    /* text-align: left;
+    width: 50%;
+    margin-bottom: 10px; */
+/* } */
+
+.form-check>.form-check-item{
+    float: left;
+    /* display: inline-block; */
+    text-align: left;
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+/* 用户自定义 */
+.form-inline .checkbox{
+    display: inline-block;
+    margin-right: 10px;
+}

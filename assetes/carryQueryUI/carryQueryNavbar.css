@@ -1,0 +1,43 @@
+/* 导航条样式 
+    1：所有与的元素状态默认为显示状态
+    @media 以外 是所有 屏幕共有的样式
+*/
+.navbar{
+    display: none;
+}
+.navbar-default{
+    display: block;
+    background-color: #333;
+}
+.navbar-inverse{
+    display: block;
+    color: #383838;
+}
+/* 默认移动端： 让下拉提示按钮为显示状态 */
+.collapse{
+    display: block;
+}
+.navbar-header{
+    width: 100%;
+    display: inline-block;
+    float: none;
+}
+.navbar-form-control .form-control{
+    display: inline-block;
+    width: auto;
+    border: none;
+    appearance: none;
+}
+.navbar-form-control .form-control:focus{
+    outline: left;
+}
+/* pc 端 : 固有的样式*/
+@media screen and (min-width:768px){
+    .navbar-header{
+        float: left;
+    }
+    /* 平板、电脑固有的样式 */
+    .navbar-header>.navbar-toggle.collapse{
+        display: none;
+    }
+}

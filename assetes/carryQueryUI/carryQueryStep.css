@@ -1,0 +1,35 @@
+/* 步骤条样式 */
+.step-wrap{
+    width: 500px;
+}
+.step-wrap>.step{
+    display: inline-block;
+    margin: 0;
+}
+.step-wrap>.step>.step-circle{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.step-wrap>.step>.step-circle-info{
+    border: 0.125rem solid #409eff;
+    vertical-align: middle;
+}
+.step-wrap>.step>.step-circle-primary{
+    border: 0.125rem solid #ccc;
+    vertical-align: middle;
+    margin-left: -0.375rem;
+}
+.step-wrap>.step>.step-circle-default{
+    border: 0.125rem solid #000;
+    vertical-align: middle;
+    margin-left: -0.375rem;
+}   
+.step-line{
+    display: inline-block;
+    width: 6.35rem;
+    height: 0.125rem;
+    background-color: #ccc;
+    margin-left: -0.375rem;
+}

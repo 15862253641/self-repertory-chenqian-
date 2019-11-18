@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滑动条</title>
+</head>
+<style>
+    input {
+        outline: none;
+    }
+    .input {
+        margin-top: 2px;
+        background-color: tomato;
+        border-radius: 15px;
+        width: 400px;
+        -webkit-appearance: none;
+        height: 10px;
+    }
+
+    .input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        top: -5px;
+        height: 20px;
+        width: 20px;
+        border: 1px solid tomato;
+        background: #fff;
+        border-radius: 15px;
+    }
+</style>
+<body>
+    <form>
+        <input type="range" name="points" class="input">
+    </form>
+</body>
+</html>

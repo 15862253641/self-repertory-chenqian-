@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单组件</title>
+    <link rel="stylesheet" href="../carryQueryUI/carryQuery.css">
+    <link rel="stylesheet" href="../carryQueryUI/carryQueryForm1.css">
+    <!-- <link rel="stylesheet" href="../carryQueryUI/cq_form.css"> -->
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .box{
+        width: 800px;
+        margin: 20px auto;
+        box-shadow: 3px 3px 5px 3px #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }    
+</style>
+<body>
+    <!-- 典型表单 -->
+    <div class="box">
+        <h2>典型表单</h2>
+        <p>包括各种表单项，包括输入框、选择器、开关、单选框、多选框等</p>
+        <form class="form-group">
+            <div class="form-control">
+                <label>活动名称</label>
+                <input type="text" class="input-group">
+            </div>
+            <div class="form-control">
+                <label>活动区域</label>
+                <input type="text" placeholder="请选择活动区域" class="input-group  input-dropdown placeholder-default">
+                <i class="dropdown-icon"></i>
+            </div>
+            <div class="form-control switch-control">
+                <label>即时配送</label>
+                <input type="checkbox"class="input-group switch switch-info">
+            </div>
+            <div class="form-control check-control">
+                <label class="label-control">活动性质</label>
+                <div class="square-check-md">
+                    <input type="checkbox" class="check-control">美食餐厅线上活动
+                    <input type="checkbox" class="check-control">地推活动
+                </div>
+                <div class="square-check-md">
+                    <input type="checkbox" class="check-control">线下主题活动
+                    <input type="checkbox" class="check-control">单纯品牌曝光
+                </div>
+            </div>
+            
+            <div class="form-control circle-check-md">
+                <label>特殊资源</label>
+                <input type="checkbox" class="">线上品牌商赞助
+                <input type="checkbox" class="">线下场地免费
+            </div>
+            <div class="form-control textarea">
+                <label>活动形式</label>
+                <!-- <input type="text" class="input-group"> -->
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button class="cq-btn cq-btn-primary cq-btn-submit">立即创建</button>
+            <button class="cq-btn btn-white">取消</button>
+        </form>
+    </div>
+
+    <!-- 行内表单 -->
+    <div class="box">
+        <h2>行内表单样式</h2>
+        <p>当垂直方向空间受限且表单比较简单时，可以在一行内放置表单</p>
+        <form class="form-group from-inline">
+            <div class="form-control">
+                <label>审批人</label>
+                <input type="text" placeholder="审批人" class="input-group placeholder-default">
+                <label>活动区域</label>
+                <input type="text" placeholder="活动区域" class="input-group placeholder-default">
+                <i class="dropdown-icon"></i>   
+                <button class="cq-btn cq-btn-primary-rgb btn-sm-wh btn-after">查询</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 对齐方式 -->
+    <div class="box">
+        <h2>对齐方式</h2>
+        <p>根据目标和制约因素，选择最佳的标签对齐方式</p>
+        <form class="form-group alignment">
+            <button class="cq-btn btn-white active">左对齐</button>
+            <button class="cq-btn btn-white">右对齐</button>
+            <button class="cq-btn btn-white">顶部对齐</button>
+            <div class="form-control">
+                <label>名称</label>
+                <input type="text" class="input-group">             
+            </div>
+            <div class="form-control">
+                <label>活动区域</label>
+                <input type="text" class="input-group">             
+            </div>
+            <div class="form-control">
+                <label>活动形式</label>
+                <input type="text" class="input-group">             
+            </div>
+        </form>
+    </div>
+
+    <!-- 表单验证 -->
+    <div class="box">
+        <h2>表单验证</h2>
+        <p>为了防止用户犯错的前提下，尽可能让用户更早的发现并纠正错误</p>
+        <form class="form-group">
+            <div class="form-control">
+                <label><span>*</span> 活动名称</label>
+                <input type="text" class="input-group">
+            </div>
+            <div class="form-control">
+                <label><span>*</span> 活动区域</label>
+                <input type="text" placeholder="请选择活动区域" class="input-group  input-dropdown placeholder-default">
+                <i class="dropdown-icon"></i>
+            </div>
+            <div class="form-control switch-control">
+                <label><span>*</span> 即时配送</label>
+                <input type="checkbox"class="input-group switch switch-info">
+            </div>
+            <div class="form-control check-control">
+               <label class="label-control"><span>*</span> 活动性质</label>
+                <div class="square-check-md">
+                    <input type="checkbox" class="check-control">美食餐厅线上活动
+                    <input type="checkbox" class="check-control">地推活动
+                </div>
+                <div class="square-check-md">
+                    <input type="checkbox" class="check-control">线下主题活动
+                    <input type="checkbox" class="check-control">单纯品牌曝光
+                </div>
+            </div>
+            
+            <div class="form-control circle-check-md">
+                <label><span>*</span> 特殊资源</label>
+                <input type="checkbox" >线上品牌商赞助
+                <input type="checkbox" >线下场地免费
+            </div>
+            <div class="form-control textarea">
+                <label><span>*</span> 活动形式</label>
+                <!-- <input type="text" class="input-group"> -->
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button class="cq-btn cq-btn-primary cq-btn-submit">立即创建</button>
+            <button class="cq-btn btn-white">重置</button>
+        </form>
+    </div>
+
+    <!-- 自定义校验规则 -->
+    <div class="box">
+        <h2>自定义校验规则</h2>
+        <p>这个例子中展示了如何使用自定义规则来完成密码的二次验证</p>
+        <form class="form-group">
+            <div class="form-control">
+                <label>密码</label>
+                <input type="text" class="input-group">
+            </div>
+            <div class="form-control">
+                <label>确认密码</label>
+                <input type="text" class="input-group">
+            </div>
+            <div class="form-control">
+                <label>年龄</label>
+                <input type="text" class="input-group">
+            </div>
+            <button class="cq-btn btn-confirm btn-sm-wh cq-btn-primary cq-btn-submit">提交</button>
+            <button class="cq-btn btn-confirm-white btn-sm-wh">重置</button>
+        </form>
+    </div>
+
+    <!-- 动态增减表单项 -->
+    <div class="box">
+        <h2>动态增减表单项</h2>
+        <form class="form-group">
+            <div class="form-control">
+                <label><span>*</span> 邮箱</label>
+                <input type="text" class="input-group examInputEmai">
+            </div>
+            <div class="form-control">
+                <label><span>*</span> 域名0</label>
+                <input type="text" placeholder="请选择活动区域" class="input-group">
+                <i class="dropdown-icon"></i>
+                <button class="cq-btn btn-confirm-white btn-sm-wh btn-after">删除</button>
+            </div>        
+            <button class="cq-btn btn-confirm btn-sm-wh cq-btn-primary cq-btn-submit">立即创建</button>
+            <button class="cq-btn btn-confirm-white btn-sm-wh">新增域名</button>
+            <button class="cq-btn btn-confirm-white btn-sm-wh">重置</button>
+        </form>
+    </div>
+
+    <!-- 数字类型表单 -->
+    <div class="box">
+        <h2>数字类型表单</h2>
+        <form class="form-group">
+            <div class="form-control">
+                <label><span>*</span> 年龄</label>
+                <input type="text" class="input-group">
+            </div>
+            <button class="cq-btn btn-confirm btn-sm-wh cq-btn-primary cq-btn-submit">提交</button>
+            <button class="cq-btn btn-confirm-white btn-sm-wh">重置</button>
+        </form>
+    </div>
+
+
+    <!-- 黑色系 横向排列 -->
+    <!-- <div class="boxs form-horizontal">
+        <p>标题</p>
+        <form class="form-group">
+            <div class="form-group">
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="1234567890">
+                <label for="">标签标签 :</label>
+                <input type="text">
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXX"> —— <input type="text" placeholder="XXXXXXX">
+                <label for="">状态标签 :</label>
+                <input type="text" placeholder="账户提款">
+            </div>
+            <button class="cq-btn btn-search btn-default-wh">搜索</button>
+            <button class="cq-btn btn-default-wh btn-all">全部</button>
+            <button class="cq-btn btn-default-wh btn-day">今天</button>
+            <button class="cq-btn btn-default-wh btn-day">昨天</button>
+            <button class="cq-btn btn-default-wh btn-day">前天</button>
+        </form>
+    </div> -->
+
+    <!-- 纵向排列 -->
+    <!-- <div class="boxs vertival-sort">
+        <p>标题</p>
+        <form class="form-group">
+            <div>
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXX">
+                <img src="../images/箭头 拷贝.png" alt="" style="margin-left: -50px;">
+            </div>
+            <div>
+                <label for="">标签标签:</label>
+                <input type="text" placeholder="浙江省 / 杭州市">
+                <img src="../images/箭头 拷贝.png" alt="" style="margin-left: -50px;">
+            </div>
+            <div>
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXXXX">
+            </div>
+            <div>
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXXXXX">
+            </div>
+            <div>
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXXXXX">
+            </div>
+            <div>
+                <label for="">标签标签 :</label>
+                <input type="text" placeholder="XXXXXXXXX">
+            </div>
+            <div>
+                <label for="">标签标签 :</label>
+            <input type="text" placeholder="请填写您资金密码"><br>
+            <div class="warm-prompt">
+                <span>温馨提示：XXXXXXXXXXXXXXXX</span>
+            </div> 
+        </div>
+        <button class="cq-btn btn-cancel btn-default-wh">取消</button>
+        <button class="cq-btn btn-confirm btn-default-wh">确定</button>
+        </form>
+    </div> -->
+
+    <!-- 修改提示 表单-->
+    <!-- <div class="boxs alter-prompt">
+        <p>修改提示</p>
+        <form class="form-group">
+            <div class="now_password">
+                <label for="">当前密码:</label>
+                <input type="text">
+            </div>
+            <div class="new_password">
+                <label for="">新密码:</label>
+                <input type="text">
+            </div>
+            <div class="sure_password">
+                <label for="">确认密码:</label>
+                <input type="text">
+            </div>
+            <button class="cq-btn btn-cancel btn-default-wh">取消</button>
+            <button class="cq-btn btn-confirm btn-default-wh">确定</button>
+        </form>
+    </div> -->
+
+
+    <!-- 重置表单 -->
+    <!-- <div class="boxs reset-form">
+        <form class="form-group">
+            <div class="input-background">
+                <label for="">提现 :</label>
+                <input type="text" placeholder="提款时间: 10:00至17:00">
+            </div>
+            <div>
+                <label for="">收款卡 :</label>
+                <input type="text" placeholder="招商银行 | 6638 金**">
+                <!-- 伪元素 -->
+            <!-- </div>
+            <div>
+                <label for="">提款金额 :</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">资金密码 :</label>
+                <input type="text">
+            </div>
+            <button class="cq-btn btn-reset btn-default-wh">重置</button>
+            <button class="cq-btn btn-submit btn-default-wh">提交</button>
+        </form>
+    </div> --> 
+
+
+    <!-- 联系人表单 -->
+    <!-- <div class="boxs contact_user">
+        <div class="linkman">
+            <p class="number_title">
+                <span>我的下级</span>
+                <!-- 伪元素 -->
+                <!-- <span class="close-icon"></span>
+            </p>
+            <form class="form-group">
+                <label for="">搜索 :</label>
+                <input type="text" placeholder="请输入用户名(手机号)搜索" class="search_user">
+            </form>
+            <div class="contact_receiver">
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_middle_icon"></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_middle_icon"></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_middle_icon"></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+                <span class="contact_num"><span class="sure_middle_icon"></span>15862253641</span>
+                <span class="contact_num"><span class="sure_icon"><i class="iconfont icon-duihao"></i></span>15862253641</span>
+            </div> -->
+            <!-- 黑色系 分页-->
+            <!-- <div class="page_number">
+                <span class="page_count"><span style="font-size: 18px;">全选</span> 选择当前类型所有项目</span>
+                <span class="page_one">1</span>
+                <span class="page_two">2</span>
+                <span class="page_three">3</span>
+                ……
+                <span class="page_six">6</span>
+                <button class="cq-btn btn-confirm btn-default-wh">确定</button>
+            </div>
+        </div>
+    </div> --> 
+
+    <!-- 删除提示 -->
+    <!-- <div class="boxs delete-prompt">
+        <div class="delete_message">
+            <p>提示</p>
+            <div class="delete_warning">请确认是否<p>删除</p>该条消息主题为 <p>"注意事项"</p> 的消息</div>
+            <button class="cq-btn btn-close btn-default-wh">关闭</button>
+            <button class="cq-btn btn-delete btn-default-wh">删除</button>
+        </div>
+    </div> -->
+
+
+    <!-- 查看消息 -->
+    <!-- <div class="boxs check-message">
+        <div class="check_content">
+            <p>查看消息</p>
+            <form class="form-group">
+                <div>
+                    <label for="">消息来源 :</label>
+                    <input type="text" value="上级">
+                </div>
+                <div>
+                    <label for="">发件人 :</label>
+                    <input type="text" value="百马网络">
+                </div>
+                <div>
+                    <label for="">收件时间 :</label>
+                    <input type="text" value="2019-11-01 10:16:37">
+                </div>
+                <div>
+                    <label for="">消息主题 :</label>
+                    <input type="text" value="注意事项">
+                </div>
+                <div>
+                    <label for="" style="vertical-align: top;">消息内容:</label>
+                    <textarea name="" id="" cols="30" rows="10">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+                    </textarea>
+                </div>
+                <button class="cq-btn btn-close btn-default-wh">关闭</button>
+            </form>
+        </div>
+    </div> -->
+
+
+    <!-- 找回密码表单 -->
+    <!-- <div class="boxs retrieve_password">
+        <div class="password_content">
+            <p>找回密码</p>
+            <form class="form-group">
+                <div class="mobile_phone">
+                    <label for="">手机号</label>
+                    <input type="text">
+                </div>
+                <div class="code" style="width:563px;">
+                    <label for="">验证码</label>
+                    <input type="text">  
+                    <span class="receive_code">获取验证码</span>
+                </div>   
+                <div class="new_password">
+                    <label for="">新密码</label>
+                    <input type="text">
+                </div>
+                <div class="sure_password">
+                    <label for="">确认密码</label>
+                    <input type="text">
+                </div>
+                <button class="cq-btn btn-login btn-lg">立即登录</button>
+            </form>
+        </div>
+    </div> -->
+
+</body>
+</html>

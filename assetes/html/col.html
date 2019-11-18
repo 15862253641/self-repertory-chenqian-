@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栅格系统</title>
+    <link rel="stylesheet" href="../carryQueryUI/carryQueryCol.css">
+</head>
+<style>
+    .wrap{
+        border: 3px solid black;
+    }
+    .green{
+        background-color: green;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .black{
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="row wrap">
+        <div class="col-md-6 col-lg-3 col-xs-5 col-md-push-1 green">
+            我是左边
+        </div>
+        <div class="col-md-6 col-lg-3 col-md-offset-6 col-md-pull-1 col-xs-4 blue">
+            我是右边
+        </div>
+        <div class="col-md-3 black">内容溢出</div>
+    </div>
+
+</body>
+</html>

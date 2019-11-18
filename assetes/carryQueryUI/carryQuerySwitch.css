@@ -1,0 +1,61 @@
+/* 开关样式 */
+/* 必须是Input为 checkBox class 添加 switch 才能实现 以下效果 */
+input[type="checkbox"].switch{
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 2.8rem;
+    height: 1.52rem;
+    border:1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 0.7rem;
+}
+input[type="checkbox"].switch::after{
+    content: "";
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px #999;
+    transition: left 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+input[type="checkbox"].switch:checked{
+    background-color: #32ba58;
+}
+/* 
+    1：默认为不被选中状态
+    当input[type="checkbox"] 被选中时候；伪元素显示下面样式  定位发生变化
+*/
+input[type="checkbox"].switch:checked::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* right: 0; */
+}
+
+/* 状态 */
+/* 蓝开 灰关 */
+input[type="checkbox"]:checked.switch.switch-info{
+    background-color: #409EFF;
+}
+/* 红开 灰关 */
+input[type="checkbox"]:checked.switch.switch-danger{
+    background-color: #F56C6C;
+}
+/* 橙开 灰关 */
+input[type="checkbox"]:checked.switch.switch-warning{
+    background-color: #E6A23C;
+}
+/* 蓝开 红关 */
+input[type="checkbox"]:checked.switch.switch-primary{
+    background-color: #409EFF;
+}
+input[type="checkbox"].switch.switch-primary{
+    background-color: #F56C6C;
+}

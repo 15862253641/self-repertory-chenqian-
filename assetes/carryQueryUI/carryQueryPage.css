@@ -1,0 +1,105 @@
+/* 这里写分页样式 */
+.Page{
+    width: 100%;
+}
+.pagination{
+    display: inline-block;
+    margin: 0px -15px;
+}
+.pagination>li>a{
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #383030;
+}
+.pagination>li{
+    display: inline-block;
+    list-style: none;
+    /* float: left; */
+}
+/* 伪类清除浮动 */
+.pagination ul:after{
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.pagination ul{
+    zoom: 1;
+}
+
+.pagination-bgc>li>a{
+    background-color: #f4f4f5;
+    color: #303133;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #f4f4f5;
+    font-weight: 900;
+}
+
+.pagination-bgc .active>a{
+    color: #fff;
+    background-color: rgb(64, 143, 218);
+}
+.pagination-bgc>li>a:hover{
+    color: #fff;
+    background-color: rgb(64, 143, 218);
+}
+
+.pagination-nobgc>li>a:hover{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-noBgc>li>a{
+    color: #303133;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 900;
+}
+
+.pagination-noBgc .active>a{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-noBgc>li>a:hover{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-inverse>li>a{
+    background-color: #2A2C3A;
+    color: #28A2EC;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 900;
+}
+.pagination-inverse>li{
+    float: left;
+}
+
+.pagination-inverse>li>a:hover{
+    color: #fff;
+    background-color: #393d49;
+}
+
+.pagination-inverse-lg>li>a{
+    font-size: 16px;
+    color: #ccc;
+    background-color: #393d49;
+    padding: 8px 12px;
+    border: 1px solid #393d49;
+}
+.pagination-inverse-lg .active>a{
+    color: #fff;
+    background-color: #000;
+}
+.pagination-inverse-lg>li{
+    float: left;
+}
+.pagination-inverse-lg>li>a:hover{
+    color: #fff;
+    background-color: #000;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sliderBar滑块</title>
+    <!-- <link rel="stylesheet" href="../carryQueryUI/carryQuerySliderBar.css"> -->
+    <link rel="stylesheet" href="../carryQueryUI/carryQuery.css">
+    <script src="../jquery.js"></script>
+    <!-- <script>
+        $(function(){
+            var interval = setInterval(increment,200);
+            var current = 0;
+            function increment(){
+            current++;
+            $('#progress-num').html(current+'%');
+            if(current == 200) { current = 0; }
+        }
+        $('.sliderbar').mouseover(function(){
+        clearInterval(interval);
+        }).mouseout(function(){
+            interval = setInterval(increment,200);
+        });
+    });
+    </script> -->
+</head>
+<style> 
+._border_wrap{
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    left: 23%;
+    top: 25%;
+}
+._border{
+    line-height: 145px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    -webkit-text-fill-color: transparent;
+    background-image:  -webkit-linear-gradient(left,#129835,#ece648 25%,#129835 50%,#F9E92B 75%,rgb(40, 150, 38));
+    background-size: 200%,100%;
+    -webkit-background-clip: text;
+    -webkit-animation: word 5s linear infinite ;
+}
+@keyframes word {
+    0%{background-position: 0 0}
+    100%{background-position: -100% 0}
+}
+</style>
+<body>
+    <!-- 静态组件 -->
+    <h2>默认</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>绿色</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar sliderbar-success">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>首选</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar sliderbar-info">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>首选</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar sliderbar-primary">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>红色</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar sliderbar-error">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>彩色</h2>
+    <div class="sliderbar-wrap">
+        <div class="sliderbar sliderbar-colours">
+            <div class="sliderbar-control">
+                <span class="progress-num" id="progress-num">55</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

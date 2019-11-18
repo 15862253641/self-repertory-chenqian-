@@ -1,0 +1,136 @@
+/* 表单组件样式 */
+/* 典型表单 */
+.form-group{
+    width: 100%;
+    color: #606266;
+    padding: 20px 30px;
+    border: 1px solid #DCDFE6;
+    box-sizing: border-box;
+    margin: 20px 0 20px;
+}
+.form-control{
+    margin-top: 10px;
+}
+.form-group label{
+    display: inline-block;
+    width: 70px;
+}
+.form-group .input-group{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #DCDFE6;
+    margin:10px 0 10px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 20px; 
+}
+.form-group .input-dropdown{
+    position: relative;
+}
+.form-group .input-dropdown::before{
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* 下拉图标组件位置 */
+.form-group .dropdown-icon{
+    margin-left: -40px;
+    margin-top: -1px;
+}
+/* 设置placeholder样式 */
+/* Chrome/Opera/Safari */
+.form-group .placeholder-default::-webkit-input-placeholder {  
+    color: #C0C4CC;
+}
+/* Firefox 19+ */
+.form-group .placeholder-default::-moz-placeholder {   
+    color: #C0C4CC;
+}
+/* IE 10+ */ 
+.form-group .placeholder-default::-ms-input-placeholder { 
+    color: #C0C4CC;
+}
+/* Firefox 18- */ 
+.form-group .placeholder-default::-moz-placeholder { 
+     color: #C0C4CC;
+}
+.form-group input[type="checkbox"].switch-info{
+   margin: -7px 10px;
+}
+.check-control{
+    margin-top: 20px;
+}
+.form-group>.form-control>.square-check-md{
+    width: 139px;
+}
+.form-control>.label-control{
+    vertical-align: top;
+}
+.form-control>.square-check-md>input[type="checkbox"]{
+    vertical-align: middle;
+    margin: 0 5px 5px 0;
+}
+.form-control>.square-check-md>input[type="checkbox"]:hover{
+    border: 1px solid #409EFF;
+}
+
+/* 单选框 */
+.form-group>.circle-check-md>input[type="checkbox"]{
+    vertical-align: middle;
+}
+.form-group>.textarea{
+    margin-top: 20px;
+}
+.form-group>.textarea>label{
+    vertical-align: top;
+}
+textarea{
+    width: 300px;
+    height: 45px;
+    border: 1px solid #DCDFE6;
+}
+.form-group>button{
+    margin-top: 20px;
+}
+.form-group>.cq-btn-submit{
+    margin-left: 75px;
+}
+
+
+/* 行内表单样式 */
+.from-inline>.form-control>input{
+    width: 180px;
+}
+.form-control>.btn-after{
+    margin:-5px 0 0 30px;
+}
+
+ /* 表单验证 */
+ .form-group>.form-control span{
+    color: red;
+    font-size: 20px;
+}
+
+/* 表单对齐方式 */
+/* 对齐方式表单 */
+.alignment>button:hover{
+    color: #409EFF;
+}
+.alignment>.active{
+    color: #fff;
+    background-color: #409EFF;
+    border: 1px solid transparent;
+}
+.alignment>.active:hover{
+    color: #fff;
+    background-color: #409EFF;
+    border: 1px solid transparent;
+}
+.alignment>button:active{
+    color: #fff;
+    background-color: #409EFF;
+    border: 1px solid transparent;
+}

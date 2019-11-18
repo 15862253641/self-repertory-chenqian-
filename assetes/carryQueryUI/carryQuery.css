@@ -1,0 +1,2145 @@
+/* 这是一个全局的css样式库。欢迎使用carryQueryUI样式库 */
+
+/* 清空默认样式 */
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    width: 100%;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height:1.42857143;
+    color:#333;
+    background-color: #fff;
+  }
+/* 表单元素中的css样式 */
+/* 表单元素样式 */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/* 清空表单样式 */
+input{
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    /* input标签聚焦不出现默认边框: */
+    outline:none;
+    /* 用于IOS下移除原生样式 */
+    -webkit-appearance: none;
+}
+
+/* 音频 进程 canvas */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+/* 清空a标签默认样式 */
+a {
+    background-color: transparent;
+    color:#337ab7;
+    text-decoration: none;
+  }
+a:active,
+a:hover {
+  outline: 0;
+}
+/* 清空列表类标签默认样式 */
+ul,ol,li,dl,dt{
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+}
+*::after{
+    box-sizing: border-box;
+}
+
+/* 布局 */
+.cq-container{
+    width: 95%;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cq-container-fluid{
+    width: 100%;
+    padding: 0px 15px;
+}
+
+/* 下拉图标样式 */
+.dropdown-icon{
+        display: inline-block; 
+        width: 10px;
+        height: 2px;
+        background-color: #DCDFE6;
+        transform: rotate(45deg);
+        position: relative;
+        border-radius: 2px;
+    }
+    .dropdown-icon::before{
+        content: "";
+        width: 10px;
+        height: 2px;
+        background-color: #DCDFE6;
+        transform: rotate(90deg);
+        position: absolute;
+        top: -4px;
+        left: 4px;
+        border-radius: 2px;
+    }
+
+/* 按钮组件样式 */
+.cq-btn{
+    display: inline-block;
+    outline: 0;
+    border: none;
+    padding: 5px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.cq-btn-default{
+    background-color: #333;
+    color: #fff;
+    border: 1p solid #ccc;
+    opacity: 0.7;
+}
+.cq-btn-success{
+    background-color: #67c23a;
+    color: #fff;
+    border: 1p solid #67c23a;
+    opacity: 0.7;
+}
+/* 警告 */
+.cq-btn-warning{
+    background-color: #e6a23c;
+    color: #fff;
+    border: 1p solid #e6a23c;
+    opacity: 0.7;
+}
+/* 错误 */
+.cq-btn-error{
+    background-color: #f56c6c;
+    color: #fff;
+    border: 1p solid #f56c6c;
+    opacity: 0.7;
+}
+/* 取消 */
+.cq-btn-cancel{
+    background-color: #909399;
+    color: #fff;
+    border: 1p solid #909399;
+    opacity: 0.7;
+}
+/* 确认 */
+.cq-btn-sure{
+    background-color: #8bc220 ;
+    color: #fff;
+    border: 1p solid #8bc220;
+    opacity: 0.7;
+}
+/* 危险 */
+.cq-btn-danger{
+    background-color: #ff1022;
+    color: #fff;
+    border: 1p solid #ff1022;
+    opacity: 0.7;
+}
+/* 首选 */
+.cq-btn-primary{
+    background-color: #409eff;
+    color: #fff;
+    border: 1p solid #409eff;
+    opacity: 0.7;
+}
+/* 一般信息 */
+.cq-btn-info{
+    background-color: #01aaed;
+    color: #fff;
+    border: 1px solid #01aaed;
+    opacity: 0.7;
+}
+/* 禁止按钮 */
+.cq-btn-disable{
+    background-color: #909399;
+    color: #fff;
+    border: 1px solid #909399;
+    opacity: 0.7;
+}
+
+/* 百搭按钮 */
+.cq-btn-normal{
+    background-color: #ffb800;
+    color: #fff;
+    border: 1px solid #ffb800;
+    opacity: 0.7;
+}
+/* 暖色按钮 */
+.cq-btn-warm{
+    background-color: hsl(51, 93%, 54%);
+    color: #fff;
+    border: 1px solid hsl(51, 93%, 54%);
+    opacity: 0.7;
+}
+/* 编辑按钮 */
+.cq-btn-edit{
+    color: #606266;
+    background-color: #fff;
+    border: 1px solid #DCDFE6;
+}
+.table-btn .cq-btn-edit:hover{
+    color: #889EFF;
+    background-color: #ECF5FF;
+    border: 1px solid #889EFF;
+}
+/* 用户名按钮 */
+.cq-username-btn{
+    color: #889EFF;
+    background-color: #ECF5FF;
+    border: 1px solid #889EFF;
+}
+
+/* 删除按钮悬浮样式 */
+
+
+/* 渐变的按钮样式 */
+/* 默认 .cq-btn-default */
+.cq-btn-default-rgb{
+    background: linear-gradient(135deg, rgb(58, 57, 59) 10%, rgb(54, 9, 64) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 成功 cq-btn-success-rgb */
+.cq-btn-success-rgb{
+    background: linear-gradient(135deg, rgb(105, 255, 151) 10%, rgb(0, 228, 255) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 警告 cq-btn-warning-rgb */
+.cq-btn-warning-rgb{
+    background: linear-gradient(135deg, rgb(246, 206, 236) 10%, rgb(217, 57, 205) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 错误 cq-btn-error-rgb */
+.cq-btn-error-rgb{
+    background: linear-gradient(135deg, rgb(240, 95, 87) 10%, rgb(54, 9, 64) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 取消 cq-btn-cancel-rgb */
+.cq-btn-cancel-rgb{
+    background: linear-gradient(135deg, rgb(107, 95, 95) 10%, rgb(63, 56, 65) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 确认 cq-btn-sure-rgb */
+.cq-btn-sure-rgb{
+    background: linear-gradient(135deg, rgb(112, 245, 112) 10%, rgb(73, 198, 40) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 危险 cq-btn-danger-rgb */
+.cq-btn-danger-rgb{
+    background: linear-gradient(135deg, rgb(253, 216, 25) 10%, rgb(232, 5, 5) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 首选 cq-btn-primary-rgb */
+.cq-btn-primary-rgb{
+    background: linear-gradient(135deg, rgb(60, 140, 231) 10%, rgb(0, 234, 255) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 一般信息 cq-btn-info-rgb */
+.cq-btn-info-rgb{
+    background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 禁止按钮 cq-btn-disable-rgb */
+.cq-btn-disable-rgb{
+    background: linear-gradient(135deg, rgb(148, 156, 156) 10%, rgb(55, 55, 58) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 百搭按钮 cq-btn-normal-rgb */
+.cq-btn-normal-rgb{
+    background: #ffb800;
+    background: linear-gradient(135deg, rgb(175, 164, 105) 10%, rgb(233, 164, 14) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+/* 暖色按钮 cq-btn-warm-rgb */
+.cq-btn-warm-rgb{
+    background: linear-gradient(135deg, rgb(177, 179, 69) 10%, rgb(250, 214, 7) 100%);
+    color: #fff;
+    opacity: 0.7;
+}
+
+/* 按钮大小 */
+/* 大按钮 */
+.cq-btn-bg{
+    padding: 8px 15px;
+    height: 60px;
+    font-size: 36px;
+    line-height: 36px;
+    background: linear-gradient(135deg, rgb(245, 203, 255) 10%, rgb(195, 70, 194) 100%);
+    opacity: 0.7;
+    color: #fff;
+}
+/* 小按钮 */
+.cq-btn-sm{
+    padding: 4px 8px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 12px;
+    background: linear-gradient(135deg, rgb(253, 216, 25) 10%, rgb(232, 5, 5) 100%);
+    opacity: 0.7;
+    color: #fff;
+}
+/* 圆角按钮 */
+.cq-btn-radius{
+    height: 30px;
+    line-height: 14px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgb(112, 245, 112) 10%, rgb(73, 198, 40) 100%);
+    opacity: 0.7;
+    color: #fff;
+}
+
+/* 悬停触发，hover伪类 */
+.cq-btn:hover{
+    opacity: 1;
+    color: black;
+}
+.cq-btn:active{
+    opacity: 1;
+    color: rgb(189, 29, 167);
+}
+
+/* 白色取消按钮 */
+.btn-white{
+    text-align: center;
+    color: #606266;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #DCDFE6;
+}
+
+/* 浅蓝渐变色按钮 */
+/* 带边框 按钮*/
+/* 取消 搜索 重置 关闭*/
+.btn-cancel,.btn-search,.btn-reset,.btn-close{
+    text-align: center;
+    color: #28AAF7;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+    border: 1px solid #28AAF7; 
+}
+/* 确认 提交 删除 */
+.btn-confirm,.btn-submit,.btn-delete,.btn-login{
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, rgb(59, 202, 228) 10%, rgb(24, 170, 238) 100%);
+}
+.btn-confirm-white{
+    color: #606266;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #DCDFE6;
+    background-color: #fff;
+}
+
+/* 全选按钮 */
+.btn-all{
+    text-align: center;
+    color: #28AAF7;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+}
+/* 日期按钮 */
+.btn-day{
+    text-align: center;
+    color: #53627D;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+}
+
+.btn-xs{
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.btn-sm{
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+.btn-default{
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 45px;
+}
+.btn-lg{
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+.btn-xs-wh{
+    padding: 7px 18px;
+    font-size: 12px;
+}
+.btn-sm-wh{
+    padding: 8px 21px;
+    font-size: 14px;
+}
+
+.btn-default-wh{
+    padding: 12px 44px;
+    font-size: 16px;
+}
+.btn-lg-wh{
+    padding: 12px 44px;
+    font-size: 18px;
+}
+
+/* 黑色系按钮组件 */
+/* 浅蓝渐变色按钮 */
+/* 带边框 按钮*/
+/* 取消 搜索 重置 关闭*/
+.btn-cancel,.btn-search,.btn-reset,.btn-close{
+    text-align: center;
+    color: #28AAF7;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+    border: 1px solid #28AAF7; 
+}
+/* 确认 提交 删除 */
+.btn-confirm,.btn-submit,.btn-delete,.btn-login{
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, rgb(59, 202, 228) 10%, rgb(24, 170, 238) 100%);
+}
+
+/* 全选按钮 */
+.btn-all{
+    text-align: center;
+    color: #28AAF7;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+}
+/* 日期按钮 */
+.btn-day{
+    text-align: center;
+    color: #53627D;
+    background-color: #2A2C3A;
+    border-radius: 5px;
+}
+
+.btn-xs{
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+.btn-sm{
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+}
+.btn-default{
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 45px;
+}
+.btn-lg{
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+.btn-xs-wh{
+    padding: 7px 18px;
+    font-size: 12px;
+}
+.btn-sm-wh{
+    padding: 8px 21px;
+    font-size: 14px;
+
+}
+.btn-default-wh{
+    padding: 12px 44px;
+    font-size: 16px;
+}
+.btn-lg-wh{
+    padding: 12px 44px;
+    font-size: 18px;
+}
+
+
+
+/* 表格样式 */
+/* 清空默认样式 */
+table{
+    background-color: transparent;
+    /* 表格塌陷 */
+    border-collapse: collapse;
+    border: 0px;
+}
+th{
+    font-weight: bold;
+    color: #909399;
+}
+.table{
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+.table td{
+    border: 1px solid #e0e0e0;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    color: #606263;
+    padding: 10px 0 10px 15px;
+    
+}
+.table>thead>tr>th{
+    text-align: left;
+    font-weight: 600;
+    color: #606263;
+    padding: 10px 0 10px 15px;
+}
+.table-column>tbody>tr>td{
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+.table-column>tbody>tr>td:first-child{
+    border-left: 1px solid transparent;
+}
+.table-column>tbody>tr>td:last-child{
+    border-right: 1px solid transparent;
+}
+
+.table-striped>tbody>tr:nth-of-type(even){
+    background-color: #fafafa;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+.table-striped>tbody>tr>td{
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+.table-hover>tbody>tr:hover>td{
+    background-color: #cccccc !important;
+    border-bottom: 1px solid #ccc !important;
+    color: #fff;
+}
+
+.table-condensed>thead>th,
+.table-condensed>tbody>tr>td,
+.table-condensed>tbody>tr>th{
+    padding: 5px;
+}
+
+
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning, 
+.table > tfoot > tr > td.warning, 
+.table > thead > tr > th.warning, 
+.table > tbody > tr > th.warning, 
+.table > tfoot > tr > th.warning, 
+.table > thead > tr.warning, 
+.table > tbody > tr.warning,
+.table > tfoot > tr.warning, 
+.table > thead > tr.warning, 
+.table > tbody > tr.warning, 
+.table > tfoot > tr.warning{
+    background-image: linear-gradient(90deg,rgb(189, 124, 151) 10%, rgb(250, 33, 87) 100%);
+    /* background-color: #f56c6c; */
+    color: #fff;
+    border-bottom: 1px solid #f56c6c;
+}
+
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info, 
+.table > tfoot > tr > td.info, 
+.table > thead > tr > th.info, 
+.table > tbody > tr > th.info, 
+.table > tfoot > tr > th.info, 
+.table > thead > tr.info, 
+.table > tbody > tr.info,
+.table > tfoot > tr.info, 
+.table > thead > tr.info, 
+.table > tbody > tr.info, 
+.table > tfoot > tr.info{
+    background-image: linear-gradient(90deg,rgb(144, 172, 204) 10%, rgb(34, 189, 250) 100%);
+    background-color: #01aaed;
+    color: #fff;
+    border-bottom: 1px solid #01aaed;
+}
+
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success, 
+.table > tfoot > tr > td.success, 
+.table > thead > tr > th.success, 
+.table > tbody > tr > th.success, 
+.table > tfoot > tr > th.success, 
+.table > thead > tr.success, 
+.table > tbody > tr.success,
+.table > tfoot > tr.success, 
+.table > thead > tr.success, 
+.table > tbody > tr.success, 
+.table > tfoot > tr.success{
+    background-image: linear-gradient(90deg,rgb(178, 224, 151) 10%, rgb(39, 245, 32) 100%);
+    /* background-color: #8bc220; */
+    /* color: #fff; */
+    border-bottom: 1px solid #8bc220;
+}
+
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger, 
+.table > tfoot > tr > td.danger, 
+.table > thead > tr > th.danger, 
+.table > tbody > tr > th.danger, 
+.table > tfoot > tr > th.danger, 
+.table > thead > tr.danger, 
+.table > tbody > tr.danger,
+.table > tfoot > tr.danger, 
+.table > thead > tr.danger, 
+.table > tbody > tr.danger, 
+.table > tfoot > tr.danger{
+    background-image: linear-gradient(90deg,rgb(204, 141, 141) 10%, rgb(248, 47, 33) 100%);
+    /* background-color: #ff1022; */
+    /* color: #fff; */
+    border-bottom: 1px solid #ff1022;
+}
+
+.table > thead > tr > td.primary,
+.table > tbody > tr > td.primary, 
+.table > tfoot > tr > td.primary, 
+.table > thead > tr > th.primary, 
+.table > tbody > tr > th.primary, 
+.table > tfoot > tr > th.primary, 
+.table > thead > tr.primary, 
+.table > tbody > tr.primary,
+.table > tfoot > tr.primary, 
+.table > thead > tr.primary, 
+.table > tbody > tr.primary, 
+.table > tfoot > tr.primary{
+    background-image: linear-gradient(90deg,rgb(207, 134, 198) 10%, rgb(236, 42, 178) 100%);
+    /* color: #fff !important; */
+    border-bottom: 1px solid #a70b80;
+}
+
+.table > thead > tr > td.warm,
+.table > tbody > tr > td.warm, 
+.table > tfoot > tr > td.warm, 
+.table > thead > tr > th.warm, 
+.table > tbody > tr > th.warm, 
+.table > tfoot > tr > th.warm, 
+.table > thead > tr.warm, 
+.table > tbody > tr.warm,
+.table > tfoot > tr.warm, 
+.table > thead > tr.warm, 
+.table > tbody > tr.warm, 
+.table > tfoot > tr.warm{
+    background-image: linear-gradient(90deg,rgb(228, 224, 177) 10%, rgb(223, 245, 32) 100%);
+    /* background-color: rgb(202, 185, 28); */
+    /* color: #fff; */
+    border-bottom: 1px solid rgb(202, 185, 28);
+}
+
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success, 
+.table > tfoot > tr > td.success, 
+.table > thead > tr > th.success, 
+.table > tbody > tr > th.success, 
+.table > tfoot > tr > th.success, 
+.table > thead > tr.success > th, 
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th, 
+.table > thead > tr.success >td , 
+.table > tbody > tr.success > td, 
+.table > tfoot > tr.success >td,
+
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info, 
+.table > tfoot > tr > td.info, 
+.table > thead > tr > th.info, 
+.table > tbody > tr > th.info, 
+.table > tfoot > tr > th.info, 
+.table > thead > tr.info > th, 
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th, 
+.table > thead > tr.info >td , 
+.table > tbody > tr.info > td, 
+.table > tfoot > tr.info >td,
+
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning, 
+.table > tfoot > tr > td.warning, 
+.table > thead > tr > th.warning, 
+.table > tbody > tr > th.warning, 
+.table > tfoot > tr > th.warning, 
+.table > thead > tr.warning > th, 
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th, 
+.table > thead > tr.warning >td , 
+.table > tbody > tr.warning > td, 
+.table > tfoot > tr.warning >td,
+
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger, 
+.table > tfoot > tr > td.danger, 
+.table > thead > tr > th.danger, 
+.table > tbody > tr > th.danger, 
+.table > tfoot > tr > th.danger, 
+.table > thead > tr.danger > th, 
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th, 
+.table > thead > tr.danger >td , 
+.table > tbody > tr.danger > td, 
+.table > tfoot > tr.danger >td,
+
+.table > thead > tr > td.primary,
+.table > tbody > tr > td.primary, 
+.table > tfoot > tr > td.primary, 
+.table > thead > tr > th.primary, 
+.table > tbody > tr > th.primary, 
+.table > tfoot > tr > th.primary, 
+.table > thead > tr.primary > th, 
+.table > tbody > tr.primary > th,
+.table > tfoot > tr.primary > th, 
+.table > thead > tr.primary >td , 
+.table > tbody > tr.primary > td, 
+.table > tfoot > tr.primary >td,
+
+.table > thead > tr > td.warm,
+.table > tbody > tr > td.warm, 
+.table > tfoot > tr > td.warm, 
+.table > thead > tr > th.warm, 
+.table > tbody > tr > th.warm, 
+.table > tfoot > tr > th.warm, 
+.table > thead > tr.warm > th, 
+.table > tbody > tr.warm > th,
+.table > tfoot > tr.warm > th, 
+.table > thead > tr.warm >td , 
+.table > tbody > tr.warm > td, 
+.table > tfoot > tr.warm >td
+{
+    color: #fff;
+}
+
+
+
+.table-border>tbody>tr>td,
+.table-border>thead>tr>th,
+.table-border>tfoot>tr>td{
+    border: 1px solid #e0e0e0;
+}
+
+
+/* 黑色表格 */
+.table-inverse{
+    background-color: #393d49;
+    color: #6C82A6;
+}
+.table-inverse>tbody>tr>td{
+    color: #6C82A6;
+}
+.table-inverse-striped>thead>tr>th,
+.table-inverse-striped>tbody>tr>th
+
+
+.table-inverse>thead>tr>td,
+.table-inverse>tbody>tr>td{
+    text-align: center;
+    border-bottom: 1px solid #2A2C3A;
+}
+.table-inverse>thead>tr>th,
+.table-inverse>tbody>tr>th,
+.table-inverse>tfoot>tr>th{
+    text-align: center;
+    color: #28AAF7;
+    border-bottom: 1px solid #000;
+}
+.table-inverse>thead>tr>th:last-child,
+.table-inverse>tbody>tr>th:last-child,
+.table-inverse>tfoot>tr>th:last-child{
+    border-right: 1px solid #000;
+}
+
+.table-inverse-striped>tbody>tr:nth-of-type(even)>td{
+    background-color: #2A2C3A;
+    border-bottom: 1px solid #2A2C3A;
+}
+.table-inverse-striped>tbody>tr:nth-of-type(odd)>td{
+    background-color: #393d49;
+    border-bottom: 1px solid #393d49;
+}
+
+.table-inverse-striped>thead>tr>th,
+.table-inverse-striped>tbody>tr>th{
+    background-color: #393d49;
+    border-bottom: 1px solid #2A2C3A;
+    font-weight: 900;
+    text-align: center;
+}
+
+.table-inverse-hover.table-inverse>tbody>tr:hover>td,
+.table-inverse-hover.table-inverse-striped>tbody>tr:hover>td{
+    background-color: #2A2C3A;
+    color: #28AAF7;
+}
+/* .table-inverse-hover.table-inverse>tbody>tr:hover>td{
+    background-color: #2A2C3A;
+    color: #28AAF7;
+} */
+
+
+/* 裁剪 div 元素中内容的左/右边缘 - 如果溢出元素的内容区域的话：overflow-x: hidden; */
+
+/* 写兼容移动端表格 */
+@media screen and (max-width:768px){
+    .table-responsive{
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scollbar;
+        border: 1px solid #e0e0e0;
+    }
+    .table-reponsive{
+        /* 当到达移动端收，不让加大高度 */
+        min-height: .01%;
+        overflow-x: auto;
+
+    }
+}
+/* 实现横向滚动表格 */
+@media screen and (max-width: 767px){
+    .table-responsive > .table > thead > tr > th,
+        .table-responsive > .table > tbody > tr > th, 
+        .table-responsive > .table > tfoot > tr > th, 
+        .table-responsive > .table > thead > tr > td,
+        .table-responsive > .table > tbody > tr > td, 
+        .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;  /* 文本不换行 */
+    }
+}
+
+
+/* 辅助类组件 */
+
+
+
+/* 分页 */
+/* 这里写分页样式 */
+.Page{
+    width: 100%;
+}
+.pagination{
+    display: inline-block;
+    margin: 0px -15px;
+}
+.pagination>li>a{
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #383030;
+}
+.pagination>li{
+    display: inline-block;
+    list-style: none;
+    /* float: left; */
+}
+/* 伪类清除浮动 */
+.pagination ul:after{
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.pagination ul{
+    zoom: 1;
+}
+
+.pagination-bgc>li>a{
+    background-color: #f4f4f5;
+    color: #303133;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #f4f4f5;
+    font-weight: 900;
+}
+
+.pagination-bgc .active>a{
+    color: #fff;
+    background-color: rgb(64, 143, 218);
+}
+.pagination-bgc>li>a:hover{
+    color: #fff;
+    background-color: rgb(64, 143, 218);
+}
+
+.pagination-nobgc>li>a:hover{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-noBgc>li>a{
+    color: #303133;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 900;
+}
+
+.pagination-noBgc .active>a{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-noBgc>li>a:hover{
+    color: rgb(64, 143, 218);
+}
+
+.pagination-inverse>li>a{
+    background-color: #2A2C3A;
+    color: #28A2EC;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 900;
+}
+.pagination-inverse>li{
+    float: left;
+}
+
+.pagination-inverse>li>a:hover{
+    color: #fff;
+    background-color: #393d49;
+    border: 1px solid #393d49;
+}
+
+.pagination-inverse-lg>li>a{
+    font-size: 16px;
+    color: #ccc;
+    background-color: #393d49;
+    padding: 8px 12px;
+    border: 1px solid #393d49;
+}
+.pagination-inverse-lg .active>a{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+}
+.pagination-inverse-lg>li{
+    float: left;
+}
+.pagination-inverse-lg>li>a:hover{
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+/* 时间图标 */
+.table-btn-control>tbody>tr>td>.time{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #606263;
+    position: relative;
+    vertical-align: middle;
+}
+.table-btn-control>tbody>tr>td>.time::before{
+    content: ""; 
+    width: 1px;
+    height: 8px;
+    color: #606263;
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    background-color: #606263;
+}
+.table-btn-control>tbody>tr>td>.time::after{
+    content: "";
+    width: 5px;
+    height: 1px;
+    color: #606263;
+    position: absolute;
+    top: 11px;
+    left: 7px;
+    background-color: #606263;
+    transform: rotate(60deg);
+}
+
+
+/* 控制列固定，其他列可以滚动 */
+.table-box{
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    margin-top: 30px;
+    border-radius: 7px;
+    position: relative;
+}
+.table-control{
+   overflow-x: auto;
+   overflow-y: auto;
+}
+.table-control>.table>thead>tr>th{
+    text-align: center;
+}
+.table-fixed-column{
+    width: 130%;
+    min-width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.table-control>.table>thead>tr>th:first-child,
+.table-control>.table>tbody>tr>td:first-child{
+    min-width: 150px;
+    background-color: red;
+    position: absolute;
+    z-index: 100;
+    background:#fff;
+    left: 0; 
+    box-shadow: 5px 4px 6px 1px rgba(0,0,0,.12);
+}
+.table-control>.table>thead>tr>th:last-child,
+.table-control>.table>tbody>tr>td:last-child{
+    min-width: 150px;
+    position: absolute;
+    z-index: 100;
+    background:#fff;
+    right: 0; 
+    box-shadow: -5px 4px 6px 1px rgba(0,0,0,.12);
+}
+/* 选中第二列，解决内容遮罩的问题 */
+.table-control>.table>thead>tr>th:nth-child(2)::before,
+.table-control>.table>tbody>tr>td:nth-child(2)::before{
+    content:"";  /*空字符*/
+     width:250px;
+     padding: 0 30px;
+ }
+/* 选中倒数第二列，解决内容遮罩的问题 */
+.table-control>.table>thead>tr>th:nth-last-child(2)::before,
+.table-control>.table>tbody>tr>td:nth-last-child(2)::before{
+    content:"";  /*空字符*/
+     width:250px;
+     padding: 0 30px;
+ }
+ .table-control>.table-box{
+    overflow:auto;
+  }
+
+
+  /* 选择框 */
+  .circle-check,
+  .square-check,
+  .circle-check-md,
+  .square-check-md,
+  .check-content{
+    display: inline-block;
+}
+  .circle-check,
+  .square-check,
+  .circle-check-md,
+  .square-check-md,
+  .check-content{
+      margin-left: 10px;
+  }
+  .circle-check .check-content{
+      margin-left: 10px;
+  }
+  .square-check .check-content{
+    margin-left: 10px;
+
+  }
+  .circle-check-md .check-content{
+    margin-left: 10px;
+  }
+  .square-check-md .check-content{
+    margin-left: 10px;
+  }
+.circle-check>input[type="checkbox"]{
+    width:1rem;
+    height:1rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1rem;
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    -webkit-appearance: none;
+    border:1px solid #fff;
+    -webkit-tab-highlight-color: rgba(0,0,0,0);
+    color: #fff;
+    background: #fff;
+    vertical-align: middle;
+}
+
+.circle-check>input[type="checkbox"]::before{
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    color: #fff;
+}
+.circle-check>input[type="checkbox"]:checked::before{
+    content: "\2713";
+    background-color: #657AFE;
+    border: 1px solid #657AFE;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    color:#fff;
+    font-size: 0.5rem;
+    border-radius: 50%;
+}
+.circle-check>input[type="checkbox"]:checked{
+    border: 1px solid transparent;
+}
+
+.circle-check>input[type="checkbox"]:disabled::before{
+    background: #eee;
+    cursor: default;
+}
+
+/* 小单选框 */
+.circle-check-md>input[type="checkbox"]{
+    width:1.3rem;
+    height:1.3rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align:baseline; 
+    line-height: 1.3rem;
+    position: relative;
+    border-radius: 50%;
+    outline: none;
+    -webkit-appearance: none;
+    border:1px solid #fff;
+    -webkit-tab-highlight-color: rgba(0,0,0,0);
+    color: #fff;
+    background: #fff;
+}
+.circle-check-md>input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    color: #fff;
+}
+.circle-check-md>input[type="checkbox"]:checked::before{
+    content: "\2713";
+    background-color: #657AFE;
+    /* border: 1px solid #657AFE; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    color:#fff;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+.circle-check-md>input[type="checkbox"]:disabled::before{
+    background: #eee;
+    cursor: default;
+}
+
+/* 大多选框 */
+.square-check>input[type="checkbox"]{
+    width: 1.64rem;
+    height: 1.64rem;
+}
+.square-check>input[type="checkbox"],
+.square-check-md>input[type="checkbox"]{
+    outline: none;
+    /* 清空表单元素默认样式： input 突起或者凹进去的的 浅灰背景色 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: relative;
+    /* 行高颜色 解决移动端按钮； 点击出现透明灰色样式*/
+    -webkit-tab-highlight-color: rgba(0,0,0,0);
+    color: #fff;
+    vertical-align: middle;
+}
+/* 选中CheckBox 没有选中时候：伪元素的样式 */
+.square-check>input[type="checked"]:disabled::before,
+.square-check-md>input[type="checked"]:disabled::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.square-check>input[type="checkbox"]::before,
+.square-check-md>input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.square-check>input[type="checkbox"]:checked::before,
+.square-check-md>input[type="checkbox"]:checked::before{
+    content: "\2713";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #657AFE;
+    border: 1px solid #657AFE;
+    text-align: center; 
+    font-size: 1rem;
+}
+.square-check>input[type="checkbox"]:checked::before{
+    width: 1.64rem;
+    height: 1.64rem;
+    line-height: 1.64rem;
+}
+/* 当被选中的时候 */
+.square-check>input[type="checkbox"]:checked,
+.square-check-md>input[type="checkbox"]:checked{
+    border: 1px solid transparent;
+}
+.square-check>input[type="checkbox"]:disabled,
+.square-check-md>input[type="checkbox"]:disabled{
+    border: 1px solid #ccc;
+}
+
+
+/* 小 圆角多选框 */
+.square-check-md>input[type="checkbox"]{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 3px;
+}
+/* 选中CheckBox 没有选中时候：伪元素的样式 */
+.square-check-md>input[type="checked"]:disabled::before{
+    border-radius: 3px;
+}
+.square-check-md>input[type="checkbox"]::before{
+    border-radius: 3px;
+}
+.square-check-md>input[type="checkbox"]:checked::before{
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+}
+
+
+
+/* 滑块样式 */
+.sliderbar-wrap{
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 5px;
+    margin: 50px 0px;
+}
+.sliderbar{
+    width: 100%;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 3px;
+    /* position: relative; */
+    animation: progress 20s linear infinite;
+}
+.sliderbar-control{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid tomato;
+    background-color: #fff;
+    position: absolute;
+    left: calc(100% - 25px);
+    top: -10px;
+    box-sizing: border-box;
+    animation: move 20s linear infinite;
+}
+.sliderbar>.sliderbar-control>.progress-num{
+    width: 25px;
+    height: 20px;
+    background-color: rgb(0,0,0,0.5);
+    color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: -30px;
+    left: calc(100% - 25px);
+    text-align: center;
+    font-size: 12px;
+}
+.progress-num::before{
+    content: "";
+    border: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(0,0,0,0.5);
+    position: absolute;
+    top:20px;
+    left: 7px;
+}
+
+@keyframes progress{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes move{
+    from{
+        left: 0%;
+    }
+    to{
+        left: calc(100% - 25px);
+    }
+}
+
+
+.sliderbar-wrap>.sliderbar-success{
+    background-image: linear-gradient(90deg, rgb(197, 226, 186) 10%, rgb(27, 245, 27) 100%);
+}
+.sliderbar-wrap>.sliderbar-success>.sliderbar-control{
+    border: 1px solid springgreen;
+}
+
+.sliderbar-info{
+    background-image: linear-gradient(90deg, rgb(59, 202, 228) 10%, rgb(24, 170, 238) 100%);
+}
+.sliderbar-info>.sliderbar-control{
+    border: 1px solid rgb(24, 170, 238);
+}
+
+.sliderbar-primary{
+    background-image: linear-gradient(90deg, rgb(215, 162, 223) 10%, rgb(238, 24, 238) 100%);
+}
+.sliderbar-primary>.sliderbar-control{
+    border: 1px solid rgb(238, 24, 238);
+}
+
+.sliderbar-error{
+    background-image: linear-gradient(90deg, rgb(252, 247, 247) 10%, rgb(255, 15, 15) 100%);
+}
+.sliderbar-error>.sliderbar-control{
+    border: 1px solid rgb(255, 15, 15);
+}
+
+/* 彩色 */
+.sliderbar-colours{
+    background-image:  -webkit-linear-gradient(left,#129835,#ece648 25%,#129835 50%,#F9E92B 75%,rgb(40, 150, 38));
+}
+.sliderbar-error>.sliderbar-control{
+    border: 1px solid #ece648;
+}
+
+/* 1：同权重；把代码放在下面 
+    2：不同权重；给所需要的显示属性；所在选择器加大权重
+*/
+
+
+/* 开关 */
+/* 必须是Input为 checkBox class 添加 switch 才能实现 以下效果 */
+input[type="checkbox"].switch{
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 2.8rem;
+    height: 1.52rem;
+    border:1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 0.7rem;
+}
+input[type="checkbox"].switch::after{
+    content: "";
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px #999;
+    transition: left 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+input[type="checkbox"].switch:checked{
+    background-color: #32ba58;
+}
+/* 
+    1：默认为不被选中状态
+    当input[type="checkbox"] 被选中时候；伪元素显示下面样式  定位发生变化
+*/
+input[type="checkbox"].switch:checked::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* right: 0; */
+}
+
+/* 状态 */
+/* 蓝开 灰关 */
+input[type="checkbox"]:checked.switch.switch-info{
+    background-color: #409EFF;
+}
+/* 红开 灰关 */
+input[type="checkbox"]:checked.switch.switch-danger{
+    background-color: #F56C6C;
+}
+/* 橙开 灰关 */
+input[type="checkbox"]:checked.switch.switch-warning{
+    background-color: #E6A23C;
+}
+/* 蓝开 红关 */
+input[type="checkbox"]:checked.switch.switch-primary{
+    background-color: #409EFF;
+}
+input[type="checkbox"].switch.switch-primary{
+    background-color: #F56C6C;
+}
+
+
+/* 步骤条样式 */
+.step-wrap{
+    width: 500px;
+    height: 100px;
+    margin: 100px auto;
+}
+.step-wrap>.step{
+    margin: 0;
+    position: relative;
+    float: left;
+}
+.step-wrap>.step-line{
+    float: left;
+    margin-top: 15px;
+}
+.step-wrap>.step>.step-circle{
+    display: inline-block;
+    width: 1.76rem;
+    height: 1.76rem;
+    border-radius: 50%;
+}
+.step-wrap>.step>.step-circle-info{
+    border: 0.125rem solid #657AFE;
+    vertical-align: middle;
+}
+.step-wrap>.step>.step-circle-primary{
+    border: 0.125rem solid #657AFE;
+    vertical-align: middle;
+    /* margin-left: -0.375rem; */
+}
+.step-wrap>.step>.step-circle-default{
+    border: 0.125rem solid #657AFE;
+    vertical-align: middle;
+    /* margin-left: -0.375rem; */
+}   
+.step-line{
+    display: inline-block;
+    width: 6.35rem;
+    height: 0.125rem;
+    background-color: #ccc;
+    /* margin-left: -0.375rem; */
+}
+
+.step>.step-circle>input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    outline: none;
+}
+/* 填充色 */
+.step>.step-circle-info>input[type="checkbox"]::before,
+.step>.step-circle-primary>input[type="checkbox"]::before,
+.step>.step-circle-default>input[type="checkbox"]::before,
+.step>.step-circle-info-unfilled>input[type="checkbox"]::before,
+.step>.step-circle-primary-unfilled>input[type="checkbox"]::before,
+.step>.step-circle-default-unfilled>input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.76rem;
+    height: 1.76rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.76rem;
+    font-size: 1rem;
+}
+
+.step>.step-circle-info>input[type="checkbox"]::before,
+.step>.step-circle-primary>input[type="checkbox"]::before,
+.step>.step-circle-default>input[type="checkbox"]::before{
+    background-color: #657AFE;
+    border: 1px solid #657AFE;
+    color: #fff;
+}
+
+.step>.step-circle-info>input[type="checkbox"]:before,
+.step>.step-circle-info-unfilled>input[type="checkbox"]:before{
+    content: "1";
+}
+.step>.step-circle-primary>input[type="checkbox"]::before,
+.step>.step-circle-primary-unfilled>input[type="checkbox"]:before{
+    content: "2";
+}
+.step>.step-circle-default>input[type="checkbox"]::before,
+.step>.step-circle-default-unfilled>input[type="checkbox"]:before{
+    content: "3";
+}
+
+.step>.step-circle-info>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-primary>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-default>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-info-unfilled>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-primary-unfilled>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-default-unfilled>input[type="checkbox"]:checked.check-circle::after{
+    content: "\2713";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.76rem;
+    height: 1.76rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.76rem;
+    font-size: 1rem;
+}
+.step>.step-circle-info>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-primary>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-default>input[type="checkbox"]:checked.check-circle::after{
+    background-color: #32ba58;
+    border: 1px solid #32ba58;
+    color: #fff;
+}
+
+/* 未填充 */
+.step>.step-circle-info-unfilled>input[type="checkbox"]::before,
+.step>.step-circle-primary-unfilled>input[type="checkbox"]::before,
+.step>.step-circle-default-unfilled>input[type="checkbox"]:before{
+    background-color: #fff;
+    border: 1px solid #657AFE;
+    color: #657AFE;
+}
+
+.step>.step-circle-info-unfilled>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-primary-unfilled>input[type="checkbox"]:checked.check-circle::after,
+.step>.step-circle-default-unfilled>input[type="checkbox"]:checked.check-circle::after{
+    background-color: #fff;
+    border: 1px solid #32ba58;
+    color: #32ba58;
+}
+
+
+/* 导航 */
+/* 导航样式
+    不兼容移动端
+*/
+.nav{
+    display: block;
+    width: 100%;
+    /* 高度不可以受到限制 */
+}
+.nav,.nav>ul{
+    padding: 0px 10px;
+}
+.nav li{
+    list-style: none;
+    float: left;
+}
+/* 给祖籍元素清除浮动 */
+.box>.nav .nav::after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    zoom: 1;
+}
+.nav li>a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    padding: 15px;
+}
+
+.nav-tab{
+    width: 100%;
+    border-bottom: 1px solid #ccc; 
+}
+.nav-tab .active>a{
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    box-shadow: 1px -1px 10px 1px #ccc;
+    font-weight: bold;
+}
+.nav-tab li>a:hover{
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    box-shadow: 1px -1px 10px 1px #ccc;
+    font-weight: bold;
+}
+.nav-tab li{
+    position: relative;
+}
+
+.nav-pills .active>a{
+    background-color: #409eff;
+    color: #fff;
+}
+.nav-pills li>a:hover{
+    background-color: #409eff;
+    color: #fff;
+}
+
+.nav-pills{
+    box-shadow: 0px 2px 5px 0px #ccc;
+}
+
+.nav-stacked{
+    padding: 0px !important;
+}
+.nav-stacked li{
+    width: 100%;
+    text-align: center;
+}
+.nav-stacked li>a{
+    width: 100%;
+    text-align: center;
+}
+
+/* 黑色导航条 */
+/* 横向 */
+.nav-inverse{
+    background-color: #545c64;
+}
+.nav-inverse .active>a{
+    color: #ffba5e;
+    border-bottom: 2px solid #ffba5e;
+}
+.nav-inverse li>a{
+    color: #fff;   
+}
+.nav-inverse li>a:hover{
+    color: #ffba5e;
+    border-bottom: 2px solid #ffba5e;
+}
+/* 纵向 */
+.nav-inverse-gray{
+    background-color:#545c64;
+}
+.nav-inverse-gray,.nav-inverse-gray>ul{
+    padding: 0px !important;
+}
+.nav-inverse-gray li{
+    width: 100%;
+    text-align: center;
+}
+.nav-inverse-gray li>a{
+    width: 100%;
+    color: #e9e3ec;
+}
+.nav-inverse-gray li>a:hover{
+    color: #ffba5e;
+    background-color: rgba(46,59,71);
+}
+.nav-inverse-gray .active>a{
+    color: #ffba5e;
+    background-color: rgba(46,59,71);
+}
+
+/* 纵向 */
+.nav-inverse-stacked{
+    background-color:#272c2c;
+}
+.nav-inverse-stacked,.nav-inverse-stacked>ul{
+    padding: 0px !important;
+}
+.nav-inverse-stacked li{
+    width: 100%;
+    text-align: center;
+}
+.nav-inverse-stacked li>a{
+    width: 100%;
+    color: #e9e3ec;
+}
+.nav-inverse-stacked li>a:hover{
+    color: #799fd8;
+    background-color: #545c64;
+}
+.nav-inverse-stacked .active>a{
+    color: #799fd8;
+    background-color: #545c64;
+}
+
+/* 横向 */
+
+.nav-inverse-black{
+    background-color: #272c2c;
+}
+.nav-inverse-black .active>a{
+    color: #799fd8;
+    border-bottom: 2px solid #545c64;
+}
+.nav-inverse-black li>a{
+    color: #e9e3ec;   
+}
+.nav-inverse-black li>a:hover{
+    color: #799fd8;
+    border-bottom: 2px solid #545c64;
+}
+
+/* 定位导航 */
+.nav-fixed-top{
+    position: fixed;
+    top: 0;
+}
+.nav-fixed-left{
+    position: fixed;
+    left: 0;
+}
+.nav-fixed-right{
+    position: fixed;
+    right: 0;
+}
+
+.nav-fixed-right-15{
+    position: fixed;
+    right: 15px;
+}
+
+/* 导航条 */
+
+.navbar{
+    background-color:rgb(223, 221, 224);
+    /* overflow: hidden; */
+}
+.navbar-header{
+    float: left;
+    line-height: 3rem;
+}
+.navbar-header::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}
+.navbar>.navbar-header>.navbar-logo{
+    float: left;
+}
+.navbar>.navbar-header::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}
+.collapse{
+display: none;
+}
+.navbar .navbar-header a{
+    font-size: 25px;
+    padding: 7px;
+}
+/* 
+默认：html width:100%=100rem
+*/
+.navbar>.navbar-collapse>.navbar-nav{
+    float: left;
+    min-width: 30rem;
+    width: 30rem;
+}
+.navbar::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}
+.navbar>.navbar-collapse>.navbar-nav>.nav{
+    margin: 0;
+}
+.navbar>.navbar-collapse>.navbar-nav>.nav a{
+    line-height: 1.6rem;
+}
+.navbar-form{
+    float: left;
+    padding: 10px 0px;
+}
+.navbar-form::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.navbar-form-control{
+    border: 1px solid #cccccc;
+    padding-left: 5px;
+    background-color: #ccc;
+}
+.navbar-form-control>input{
+    background-color: #ccc;
+    padding: 0 10px;
+}
+.navbar-form-control>.cq-btn{
+    margin-left: -5px;
+}
+.navbar-right>.nav{
+    width: 10rem;
+    float: right;
+}
+.navbar-right::after{
+    content: "";
+    display: block;
+/* 隐藏 但是占据位置 */
+    visibility: hidden;
+    clear: both;
+}  
+
+/* 状态 */
+.navbar-default{
+    background-color: rgb(223, 221, 224);
+}
+.navbar-default .navbar-form-control{
+    padding-left: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.navbar-default .navbar-form-control>input{
+    background-color: #fff;
+    padding: 0 10px;
+}
+.navbar-info{
+    background-color: #8bc220;
+}
+.navbar-info .navbar-form-control{
+    padding-left: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.navbar-info .navbar-form-control>input{
+    background-color: #fff;
+    padding: 0 10px;
+}
+.navbar-primary{
+    background-color: rgb(247, 66, 247);
+}
+.navbar-primary .navbar-form-control{
+    padding-left: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.navbar-primary .navbar-form-control>input{
+    background-color: #fff;
+    padding: 0 10px;
+}
+.navbar-inverse{
+    background-color: #ffb800;
+}
+.navbar-inverse .navbar-form-control{
+    padding-left: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.navbar-inverse .navbar-form-control>input{
+    background-color: #fff;
+    padding: 0 10px;
+}
+.navbar-default a .navbar-info a,.navbar-primary a,.navbar-inverse{
+    color: #fff !important;
+}
+/*
+@media screen and () {} 
+@media 表示媒体查询
+screen 表示媒体设备
+and 条件 且
+min-width:768px 查询条件 当屏幕尺寸 小于等于768px时候 才可以执行以下样式
+*/
+@media screen and (max-width:768px) {
+    .navbar-header .collapse{
+        display: block;
+    }
+    /* .navbar-collapse{
+        display: none;
+    } */
+    .navbar-header{
+        width: 100%;
+    }
+    .navbar-header .navbar-toggle{
+        float: right;
+        width: 32px;
+        height: 30px;
+        border: 1px solid #ccc;
+        position: relative;
+        top: 10px;
+        right: 10px;
+        text-align: center;
+    }
+    .navbar-header .navbar-toggle::after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        height: 0;
+        }
+        .navbar .navbar-collapse{
+            /* display: none;    */
+            border-top: 1px solid red;
+            /* overflow: hidden; */
+        }
+        
+    .navbar-header>.navbar-toggle>.icon-line{
+        display: inline-block;
+        line-height: 1rem;
+        font-size: 25px;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 5px;
+        left: 4px;
+    }
+    .navbar-header>.navbar-toggle>.icon-line::before{
+        content: "";
+        display: inline-block;
+        line-height: 1rem;
+        font-size: 25px;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+    .navbar-header>.navbar-toggle>.icon-line::after{
+        content: "";
+        display: inline-block;
+        line-height: 1rem;
+        font-size: 25px;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 12px;
+        left: 0;
+    }
+    .navbar-collapse >.navbar-nav>.nav{
+        border-top: 1px solid #ccc;
+    }
+    .navbar-collapse .nav>li{
+        width: 100%;
+    }
+    .navbar-collapse,.navbar-right{
+        width: 100%;
+    }
+
+    .navbar-collapse>.navbar-form{
+        margin-left: 20px;
+    }
+    .navbar-collapse>.navbar-form-control{
+        width: 100%;
+    }
+    .navbar-collapse>.navbar-right>ul{
+        width: 100%;
+    }
+    .clear{
+        clear: both;
+    }
+}
+
+
+/* 表单组件 样式*/
+/* 表单组件样式 */
+
+/* 清空 input 默认样式 */
+input{
+    /* 输入框没有样式 */
+    border: none;
+    /* 清空获取焦点时的默认样式 */
+    outline: 0;
+     /* 清空默认样式：输入框样式 按钮样式 选择框样式 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+}
+
+/* 默认的form-group */
+.form-group{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-group .form-control{
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+/* focus 获取焦点 .form-control显示以下样式 */
+/* 可以将其他元素变为表单元素： focus 值针对有可以获取焦点的元素 */
+.form-group .form-control:focus{
+    outline: 1px solid green;
+}
+.form-label{
+    display: inline-block;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    padding: 5px 3px 5px 5px;
+}
+.form-control{
+    width: 100%;
+}
+
+/* 
+    基础样式： 权重最低的；随时可附带；代替 
+   
+    可选择样式： 在基础样式基础上进行该改变添加；通过权重级别低来覆盖样式
+   
+    自当以： 给用户足够空间，让用户通过，搭建不同结构，自己进行样式添加
+
+    结构：1：占多少份；2：如何布局
+*/
+
+@media screen and (min-width:768px){
+    /* 横向 */
+    .form-inline .form-group{
+        display: inline-block;
+        /* auto 自动 宽度由子元素撑起来 */
+        width: auto;
+    }
+    .form-inline .form-control{
+        display: inline-block;
+        width: auto;
+        padding: 6px 12px;
+    }
+
+    /* 纵向 */
+    .form-horizontal{
+        text-align: center;
+    }
+    .form-horizontal .form-group::after{
+        content: "";
+        display: table;
+    }
+    .form-horizontal .form-label{
+        float: left;
+        /* display: inline-block; */
+        max-width: 100%;
+        min-width: 16.66666667%;
+        width: auto;
+        text-align: right;
+    }
+    .form-horizontal .form-control{
+        float: left;
+        /* display: inline-block; */
+        min-width: 83.33333333%;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .form-horizontal .form-check{
+        /* float: left; */
+        display: inline-block;
+        min-width: 83.33333333%;
+        max-width:100%;
+        width: auto;
+        vertical-align: top;
+        text-align: left;
+    }
+    /* 清除浮动 */
+    .form-group::after{
+        content: "";
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+    }
+
+    .form-horizontal .form-group{
+        width: 100%;
+    }
+}
+
+/* .form-check>.form-check-item{
+    float: left; */
+    /* display: inline-block; */
+    /* text-align: left;
+    width: 50%;
+    margin-bottom: 10px; */
+/* } */
+
+.form-check>.form-check-item{
+    float: left;
+    /* display: inline-block; */
+    text-align: left;
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+/* 用户自定义 */
+.form-inline .checkbox{
+    display: inline-block;
+    margin-right: 10px;
+}
