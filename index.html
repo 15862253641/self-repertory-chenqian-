@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assetes/cq-animation.css">
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    h2{
+        color: #f35626;
+        background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: hue 60s infinite linear;
+        display: inline-block;
+        background-color: black;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid green;
+    }
+    .maxbox{
+        width: 601px;
+        height: 500px;  
+        zoom: 1;
+        margin: 0 auto;
+        border-radius: 3%;
+        opacity: 0.6;
+        background-color: red;
+    }
+    .light{
+        width: 300px;
+        height: 500px;   
+        line-height: 500px;
+        border-radius: 4%;
+        float: left;
+        background-color: rgba(0,0,0,0.6);
+    }
+    .maxbox::after{
+        content: "";
+        height: 0;
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .box{
+        background-image: url("pic/client-3.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 300px;
+        border: 1px solid green;
+        margin: 0 auto;
+    }
+    /* 动画分析过程：
+        1.分析动画运动轨迹，与运动现象
+        2.想一下哪些css 属性可以实现这样的效果
+        3.根据轨迹变化：进行百分比划分（不一定是等分）
+            划分的方式：找到几个特殊的【峰值】，在峰值与峰值之间进行划分
+        4.在每个不同的百分比之间更改属性的值
+        5：如果是渐进式的，值是越来越小，直到小到回到最初状态
+
+        动画运动轨迹
+        常用的：平移 旋转 拉伸； 显示隐藏 透明度
+    */
+    #heart{
+        width: 100px;
+        height: 100px;
+        border: 0;
+        
+    }
+    #heart::before,
+    #heart::after
+     {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    #heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+</style>
+<body>
+    <h1>展示自己的动画样式</h1>
+    <h2 class="cq_animation bounce">Bounce弹跳动画</h2>
+    <br>
+    <h2 class="cq_animation cq_flash delay-2s slower">闪烁动画(慢)</h2>
+    <br>
+    <h2 class="cq_animation cq_flash delay-2s faster">闪烁动画(快)</h2>
+    <br>
+    <h2 class="cq_animation cq_flasher delay-2s faster">3频快闪</h2>
+    <br>
+    <h2 class="cq_animation cq_pulse">pulse缩放样式</h2>
+    <br>
+    <h2 class="cq_animation cq_pulseFont">字体放大样式</h2>
+    <br>
+    <h2 class="cq_animation cq_rubberBand">rubberBand伸缩样式</h2>
+    <br>
+    <h2 class="cq_animation cq_shake">shake抖动样式</h2>
+    <br>
+    <h2 class="cq_animation cq_swing">swing摇摆</h2>
+    <br>
+    <h2 class="cq_animation cq_graduallyPut">tada摇摆缩放</h2>
+    <br>
+    <h2 class="cq_animation cq_turntable">turntable转动</h2>
+    <br>
+    <h2 class="cq_animation cq_jello slowest">jello拉伸动画效果</h2>
+    <br>
+    <h2 class="cq_animation cq_lightenOut">绕着中心轴闪现</h2>
+    <br>
+    <div class="maxbox">
+        <div class="cq_animation cq_lightenOutLeft slowest light">左侧闪现</div>
+        <div class="cq_animation cq_lightenOutRight slowest light">右侧闪现</div>
+    </div>
+    <br>
+    <h2 class="cq_animation cq-liinthou">渐进左侧闪现</h2>
+    <br>
+    <div class="cq_animation cq_inauguration box">上下开幕式动画</div>
+    <div class="cq_animation cq_inaugurationTop box">cq_inaugurationTop</div>
+    <div class="cq_animation cq_inaugurationBottom box">cq_inaugurationBottom</div>
+    <br>
+    <h2 class="cq_animation cq_hearBeat infinite" id="heart">心跳</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceIn">bounceIn从里往外弹跳</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceLeft">bounceLeft从左侧弹跳</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceRight">bounceRight从右侧弹跳</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceTop">bounceTop从上侧弹跳</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceBottom">bounceBottom从下面弹跳</h2>
+    <br>
+    <br>
+
+    <!-- 作业 -->
+    <h2 class="cq_animation cq_fadeIn faster">渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInDown faster">往下渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInDownBig fast">往下Big渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInLeft faster">从左侧渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInLeftBig fast">从左侧Big渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInRight faster">从右侧渐显</h2><br>
+    <h2 class="cq_animation fadeInRightBig fast">从右侧Big渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInUp faster">往上渐显</h2><br>
+    <h2 class="cq_animation cq_fadeInUpBig fast">往上Big渐显</h2><br>
+
+    <h2 class="cq_animation cq_bounceOut">bounceOut外弹</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceOutDown">bounceOutDown下弹</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceOutUp">bounceOutUp上弹</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceOutLeft faster">bounceOutLeft左弹</h2>
+    <br>
+    <h2 class="cq_animation cq_bounceOutRight faster">bounceOutRight右弹</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOut fast">fadeOut</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutDown faster">fadeOutDown</h2>
+    <br> 
+    <h2 class="cq_animation cq_fadeOutDownBig faster" style="margin-top:100px">fadeOutDownBig</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutLeft faster">fadeOutLeft</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutLeftBig faster">fadeOutLeftBig</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutRight faster">fadeOutRight</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutRightBig faster">fadeOutRightBig</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutUp faster">fadeOutUp</h2>
+    <br>
+    <h2 class="cq_animation cq_fadeOutUpBig faster">fadeOutUpBig</h2>
+    <br>
+    <h2 class="cq_animation cq_flip fast">flip</h2>
+     <br>
+    <h2 class="cq_animation cq_flipInX fast">flipInX</h2>
+    <br>
+    <h2 class="cq_animation cq_flipInY fast">flipInY</h2>
+    <br>
+    <h2 class="cq_animation cq_flipOutX fast">flipOutX</h2>
+    <br>
+    <h2 class="cq_animation cq_flipOutY">flipOutY</h2>
+    <br>
+</body>
+</html>
